@@ -1,0 +1,24 @@
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations: null
+  labels:
+    app_environment_id: 567041dc-08ea-41e0-a19b-b3585daa53ac
+    env_id: e4869bab-0957-4bf1-89f6-40145e6d1429
+    env_name: lasanaa
+    hpa_id: 6a43a965-d634-4a52-b996-72766338b893
+    organization_id: 8b881a3f-0c62-4ca4-ab9a-db66a32ed28c
+    platformer_app_id: b68a624a-8246-4012-94e8-3b2d1f15eb28
+    platformer_app_name: mamama
+    platformer_component: rudder
+    platformer_system: "true"
+    project_id: 306c7793-1f94-4221-a91c-46e5e233ebe8
+  name: mamama
+  namespace: okay
+spec:
+  maxReplicas: 1
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: mamama
